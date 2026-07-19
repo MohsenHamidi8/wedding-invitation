@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ethereal Unions | The Wedding of Elena &amp; Julian</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Great+Vibes&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary": "#5d5f5b",
+                "surface-bright": "#fcf9f8",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "inverse-surface": "#313030",
+                "tertiary-fixed-dim": "#d8bbf4",
+                "outline": "#7f7663",
+                "tertiary-container": "#c4a8df",
+                "tertiary": "#6c5485",
+                "primary-container": "#d4af37",
+                "on-error-container": "#93000a",
+                "on-secondary-fixed-variant": "#454744",
+                "secondary-fixed-dim": "#c6c7c2",
+                "surface-container-highest": "#e5e2e1",
+                "primary-fixed": "#ffe088",
+                "on-tertiary": "#ffffff",
+                "surface-dim": "#dcd9d9",
+                "on-tertiary-fixed": "#26103e",
+                "primary": "#735c00",
+                "on-secondary-fixed": "#1a1c19",
+                "on-background": "#1c1b1b",
+                "on-primary": "#ffffff",
+                "on-error": "#ffffff",
+                "secondary-container": "#e0e0db",
+                "on-tertiary-container": "#523b6a",
+                "background": "#fcf9f8",
+                "on-surface": "#1c1b1b",
+                "on-tertiary-fixed-variant": "#533d6c",
+                "outline-variant": "#d0c5af",
+                "surface": "#fcf9f8",
+                "inverse-on-surface": "#f3f0ef",
+                "surface-variant": "#e5e2e1",
+                "on-primary-fixed-variant": "#574500",
+                "on-primary-fixed": "#241a00",
+                "tertiary-fixed": "#efdbff",
+                "secondary-fixed": "#e3e3de",
+                "surface-container": "#f0eded",
+                "on-surface-variant": "#4d4635",
+                "surface-container-low": "#f6f3f2",
+                "surface-tint": "#735c00",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-container": "#62635f",
+                "inverse-primary": "#e9c349",
+                "on-secondary": "#ffffff",
+                "primary-fixed-dim": "#e9c349",
+                "on-primary-container": "#554300",
+                "surface-container-high": "#eae7e7"
+            },
+            "fontFamily": {
+                "body-md": ["Inter"],
+                "accent-calligraphy": ["Great Vibes"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Playfair Display"],
+                "display-hero": ["Playfair Display"],
+                "label-caps": ["Inter"],
+                "headline-lg": ["Playfair Display"],
+                "display-hero-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "accent-calligraphy": ["42px", {"lineHeight": "48px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                "display-hero": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                "display-hero-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            },
+            "spacing": {
+                "margin-desktop": "80px",
+                "gutter": "32px",
+                "container-max": "1200px",
+                "unit": "8px",
+                "margin-mobile": "24px"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { -webkit-font-smoothing: antialiased; }
+        .glass-panel {
+            backdrop-filter: blur(24px);
+            background: rgba(252, 251, 247, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(115, 92, 0, 0.05);
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            transition: 0.7s;
+            pointer-events: none;
+        }
+        .shimmer-btn:hover::after {
+            left: 100%;
+            top: 100%;
+        }
+        .custom-cursor {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #735c00;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease-out;
+            mix-blend-mode: difference;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typewriter-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- Cinematic Intro -->
+<div class="fixed inset-0 z-[100] bg-black flex items-center justify-center text-center px-margin-mobile transition-opacity duration-1000" id="intro">
+<div class="space-y-6">
+<h2 class="font-headline-md text-headline-md text-primary-fixed typewriter-cursor italic leading-relaxed" id="typewriter"></h2>
+</div>
+</div>
+<!-- Mouse Follower -->
+<div class="custom-cursor hidden md:block" id="cursor"></div>
+<!-- Background Layers -->
+<div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+<!-- STITCH_SHADER_START:ANIMATION_1 class="absolute inset-0 w-full h-full opacity-60" -->
+<div class="absolute inset-0 w-full h-full opacity-60" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_1" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_1');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+float noise(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    vec3 champagne = vec3(0.95, 0.91, 0.84);
+    vec3 gold = vec3(0.83, 0.68, 0.21);
+    vec3 pearl = vec3(1.0, 0.98, 0.94);
+    
+    // Create a soft, moving gradient background
+    float t = u_time * 0.2;
+    vec3 bg = mix(champagne, pearl, 0.5 + 0.5 * sin(uv.y + t));
+    
+    // Add shimmering golden particles
+    float sparkles = 0.0;
+    vec2 p = uv * 10.0;
+    for(float i = 1.0; i < 5.0; i++) {
+        vec2 pos = vec2(noise(vec2(i, 123.0)), noise(vec2(i, 456.0)));
+        pos.y = fract(pos.y - u_time * 0.05 * i);
+        float d = length(uv - pos);
+        sparkles += (0.001 / d) * step(0.98, noise(pos + u_time * 0.01));
+    }
+    
+    vec3 color = mix(bg, gold, sparkles);
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_1 -->
+<!-- STITCH_THREEJS_START:ANIMATION_2 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_2" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_2');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js scene for floating rose gold petals and soft bokeh
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+container.appendChild(renderer.domElement);
+
+// Petal Geometry
+const petalGeometry = new THREE.TorusGeometry(0.1, 0.05, 8, 16);
+const petalMaterial = new THREE.MeshPhongMaterial({ 
+    color: 0xead1dc, // Rose Gold / Soft Pink
+    shininess: 100,
+    transparent: true,
+    opacity: 0.6
+});
+
+const petals = [];
+for (let i = 0; i < 30; i++) {
+    const petal = new THREE.Mesh(petalGeometry, petalMaterial);
+    petal.position.set(
+        (Math.random() - 0.5) * 10,
+        (Math.random() - 0.5) * 10,
+        (Math.random() - 0.5) * 5
+    );
+    petal.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
+    const scale = Math.random() * 0.5 + 0.5;
+    petal.scale.set(scale, scale, scale);
+    
+    scene.add(petal);
+    petals.push({
+        mesh: petal,
+        speed: Math.random() * 0.01 + 0.005,
+        rotationSpeed: Math.random() * 0.02
+    });
+}
+
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(5, 5, 5);
+scene.add(light);
+scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    
+    petals.forEach(p => {
+        p.mesh.position.y -= p.speed;
+        p.mesh.rotation.x += p.rotationSpeed;
+        p.mesh.rotation.y += p.rotationSpeed;
+        
+        if (p.mesh.position.y < -5) {
+            p.mesh.position.y = 5;
+            p.mesh.position.x = (Math.random() - 0.5) * 10;
+        }
+    });
+    
+    renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_2 -->
+</div>
+<!-- Shared TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl dark:bg-surface-dim/60 border-b border-outline-variant/30 shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-2 cursor-pointer active:scale-95 transition-all ease-out">
+<span class="material-symbols-outlined text-primary" data-icon="music_note">music_note</span>
+<span class="font-accent-calligraphy text-accent-calligraphy text-primary">Ethereal Unions</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-500" href="#story">Our Story</a>
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-500" href="#gallery">Gallery</a>
+<a class="text-secondary font-normal hover:text-primary-container transition-colors duration-500" href="#events">Events</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps uppercase tracking-widest hover:scale-105 transition-transform" href="#rsvp">RSVP</a>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-all md:hidden" data-icon="menu">menu</span>
+</header>
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col items-center justify-center pt-24 pb-32 relative text-center">
+<div class="reveal-up space-y-4">
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-[0.4em] mb-4">You Are Invited To The Wedding Of</p>
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface leading-none px-4">
+                Elena <span class="font-accent-calligraphy text-primary">&amp;</span> Julian
+            </h1>
+<p class="font-headline-md text-headline-md italic text-secondary mt-6">October 24th, 2024 • Lake Como, Italy</p>
+<div class="mt-12">
+<button class="shimmer-btn relative overflow-hidden bg-primary px-10 py-5 rounded-full text-on-primary font-label-caps text-label-caps uppercase tracking-widest shadow-xl transition-all hover:scale-105 active:scale-95 group" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+<span class="relative z-10 flex items-center gap-2">
+                        Open Invitation
+                        <span class="material-symbols-outlined text-[18px]" data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
+</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Love Story Timeline -->
+<section class="py-24 px-margin-mobile max-w-container-max mx-auto overflow-hidden" id="story">
+<div class="text-center mb-20 reveal-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Our Love Story</h2>
+<div class="h-[1px] w-32 bg-primary mx-auto opacity-30"></div>
+</div>
+<div class="relative space-y-32">
+<!-- Central Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-primary/30 to-transparent hidden md:block"></div>
+<!-- Event 1 -->
+<div class="reveal-up flex flex-col md:flex-row items-center gap-12 group">
+<div class="w-full md:w-1/2 order-2 md:order-1 text-right">
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-2">Summer 2018</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">First Meeting</h3>
+<p class="font-body-lg text-body-lg text-secondary">A chance encounter in a rainy London bookstore. Amidst the scent of old paper and leather, we reached for the same classic novel at the exact same moment.</p>
+</div>
+<div class="w-12 h-12 bg-surface-container rounded-full border border-primary/30 flex items-center justify-center z-10 order-1 md:order-2 shrink-0 group-hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="book_2">book_2</span>
+</div>
+<div class="w-full md:w-1/2 order-3">
+<div class="overflow-hidden rounded-xl shadow-2xl transition-transform hover:scale-[1.02]">
+<img class="w-full h-80 object-cover" data-alt="A cinematic, high-end editorial photograph of a couple looking at each other in a dimly lit, luxurious vintage library. The lighting is soft and warm, highlighting dust motes dancing in sunbeams. The aesthetic is elegant and romantic, with a focus on gold and cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpxXphR0yWuNl7lPLjQs28_R-yfmXm4m6hmovLrnbmLxr11TA_McTJVdXI0yHitof6UDEoitpr3at2ID8G4NoB_2ZVbito6Bncvclg8rkn9NdgfBun0k22zVHQnyp6f_hKgdQ4Kki_V8bP-IDL84EFL6YFNAC4oO_D7E7dsXwSo4HIQcBonQQyCY_l5OAu0iFvh43_vryk_T9mO19uNyEKZxng-I0MZCxvBczkOYHXnZt-4zwd09f2"/>
+</div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="reveal-up flex flex-col md:flex-row items-center gap-12 group">
+<div class="w-full md:w-1/2 order-3 md:order-1">
+<div class="overflow-hidden rounded-xl shadow-2xl transition-transform hover:scale-[1.02]">
+<img class="w-full h-80 object-cover" data-alt="An intimate editorial shot of two people on a balcony overlooking a sunset in Florence. They are dressed in luxury evening wear, sharing a toast with crystal champagne flutes. The lighting is golden hour, with soft highlights and long shadows. Rich textures of silk and velvet are visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnt-R_0inHoKW2mxQvCU6dGVpsrhAEUCuK67r-Igf3tNv00hTI2eII42gYMhjYK2PjJ_KWDuXKQe0tdbno37m9JnWVjVavw81NKXSq0l4HasY33ztCkADdMZw6O-BzxdxQOwEX-zJCvyOU5cO7lO545iDpQQ4kdRR-9PV_cwT5lduNn7qpTxD4zXkLP16g-dXexbN99mivDeh52BTiEQvVWu45LXS-4TylduyzqAk4jxpHSVd6VCMZ"/>
+</div>
+</div>
+<div class="w-12 h-12 bg-surface-container rounded-full border border-primary/30 flex items-center justify-center z-10 order-1 md:order-2 shrink-0 group-hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</div>
+<div class="w-full md:w-1/2 order-2 text-left">
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-2">Winter 2019</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">The First Date</h3>
+<p class="font-body-lg text-body-lg text-secondary">Coffee turned into dinner, which turned into a late-night walk along the river. We knew then that this wasn't just another beginning.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="reveal-up flex flex-col md:flex-row items-center gap-12 group">
+<div class="w-full md:w-1/2 order-2 md:order-1 text-right">
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-2">Spring 2023</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">The Proposal</h3>
+<p class="font-body-lg text-body-lg text-secondary">Under the cherry blossoms of Kyoto, surrounded by a gentle swirl of pink petals, a simple question changed our lives forever. He knelt, she wept, and the world stood still.</p>
+</div>
+<div class="w-12 h-12 bg-surface-container rounded-full border border-primary/30 flex items-center justify-center z-10 order-1 md:order-2 shrink-0 group-hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+<div class="w-full md:w-1/2 order-3">
+<div class="overflow-hidden rounded-xl shadow-2xl transition-transform hover:scale-[1.02]">
+<img class="w-full h-80 object-cover" data-alt="A breathtaking, cinematic photograph of a proposal in a Japanese garden at dawn. Cherry blossoms are falling like snow. The couple is silhouetted against the rising sun. The mood is ethereal and timeless, with a high-key, soft white and gold color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRtbXO15rh_6tLJTaWQmjr-yVlA7_HDTxxvQbNdgEfZsBGNuRPNdC--5OCo_yQ07JM3X3at2JMTPlCVdjIwHzjTpYzGQxj8vYZ2c2SgqqNU-i7SI4ZfeK9XZ4By9F0zcj5OEYdw9WnWUP5kX5vGcQIsOkHgrh8Vee3O9qR4WI4ZNQ24U9OzbeSTB_GB0fr7GzzfD28pSf7hPUjcKt_ZL-y0_mFy7VyX39oqB1W7osM4_6xJ2E4fUjp"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Countdown Section -->
+<section class="py-24 bg-surface-container-low/50 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile text-center reveal-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Counting Down To Forever</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+<div class="glass-panel p-8 rounded-2xl">
+<div class="font-headline-lg text-headline-lg text-primary" id="days">00</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2">Days</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl">
+<div class="font-headline-lg text-headline-lg text-primary" id="hours">00</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2">Hours</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl">
+<div class="font-headline-lg text-headline-lg text-primary" id="minutes">00</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2">Minutes</div>
+</div>
+<div class="glass-panel p-8 rounded-2xl">
+<div class="font-headline-lg text-headline-lg text-primary" id="seconds">00</div>
+<div class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2">Seconds</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Gallery -->
+<section class="py-24 px-margin-mobile max-w-container-max mx-auto" id="gallery">
+<div class="text-center mb-16 reveal-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Moments Captured</h2>
+<p class="font-accent-calligraphy text-accent-calligraphy text-primary mt-2">The prelude to our wedding</p>
+</div>
+<div class="grid grid-cols-12 gap-4">
+<div class="col-span-12 md:col-span-8 reveal-up">
+<div class="relative group overflow-hidden rounded-lg aspect-video h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxury editorial wedding photograph of a couple laughing together. The background is a blurred high-end European mansion. Lighting is bright, soft, and sophisticated. The color palette is dominated by ivory, champagne gold, and muted earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBFBCXX-FRyBTXLZMhWGi2SHVu2bumkWrfhiHIz7vcrHL5fsUcovJIaCvrQ8CdWnQxXIfgE98FdSgpxb_tBTxDJsY6jyw00G8_3YwP5UZhMfCbokVsfLum0yeeONfcSY_hlwVnlT94YrhjqH4_0WBW14AX4vza6elrO_njhbO4geJ8xL8NOcOKKUKpsoWVx-MP0hZSfCcL-tWTiHyYabgbJY9io734aSNcX52rjis8O2syUAc8-TMC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 space-y-4">
+<div class="reveal-up delay-100 h-[242px]">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A macro detail shot of a luxury diamond engagement ring sitting on a white silk fabric. Soft morning light creates a crystalline sparkle. Elegant, minimalist, high-end photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBaMGDPkiZPOC6Z6V01jeDm6WsK94IPLngV4Hzm1g96zDo-xAfRUAvuAJ9D7og2bh4w4UedqImKUEOhRW29MSa9FNsNJ3AC-05EXiLYnfLcVfZidiJc8PEdvqJrSHHOj6ux9ovzYUz92NlLvwF5ieCVe1RLJwrXCm5RvZeWPN9CcDRsP6dLvHKmcUFOYrxMQK1ZrYAkZXFABW979sqbSb40uRWEqpy8JCBuWfHe8AhsEQALVQgf9kw"/>
+</div>
+<div class="reveal-up delay-200 h-[242px]">
+<img class="w-full h-full object-cover rounded-lg" data-alt="An editorial shot of a couple holding hands while walking through a vineyard in Tuscany. The sunlight filters through the leaves creating a dappled light effect. Cinematic, romantic atmosphere with ivory and gold tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0hLtfX_75shJep3NrefZvohLyikR5xjTVRjtj4gOSOrYeZ0cJP_9veyQkLi3cAGDhpWoH2K5wpMNibIUgNRrppRhJrkQ0PWKnpZhJKDhU5x9F2GCUHme75vTSjoOItVYrNQV6tLHRD2r8JbdINsRnehWGsjMzyPnvFYpRaVGyWkquc7i1twY_Sjxf42QpzHwsHHit53EUXBsEh1VCq3x7tRZ99Rv7H1qSQdKAyTOqRKqKl8kICabm"/>
+</div>
+</div>
+<div class="col-span-6 md:col-span-3 reveal-up">
+<img class="w-full h-64 object-cover rounded-lg" data-alt="Close up of a bride's elegant bridal shoes and a bouquet of white peonies on a marble table. Luxury flat-lay photography with soft, ethereal lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChJ3wXruhd5K8PNi1Xr2DcJmcs6evJecpOMyMe6sTfojDYdCYogl2aB-sOUzg2xR32XKeeo5CVdLdbmR7Jl9g8QqqhVqOeD3m2kNlYraLl0JICHdIQLwcDtE6sQuNKHzxmyHGc1HfnNgZqaLSpjlLD2mmi0g6EUkeUt-y5lpIhwWYHWrbKmNZGSWXnZA7VKispLch9pdGl05FSfSSF7C8R6pKfw8g5c4fJQLbE3t_cu8ey33ouf1Go"/>
+</div>
+<div class="col-span-6 md:col-span-3 reveal-up">
+<img class="w-full h-64 object-cover rounded-lg" data-alt="A candid, high-fashion black and white photo of a couple dancing in a grand ballroom. The blur of motion creates a feeling of joy and movement. High-contrast, elegant aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcch-MbFVF0uINrkNs7-oOQhXmHP6SM5b8PsCz_Il1x063BtqWk728V2C8clvQ1ZZFOi8kWER0B8AaZPZGs2vP1wbLH-_tKEpDB5FTUi47U1T2YdaCyX9ycN4qlqZ9yY4raHxODkOjRkNxUOiI5xA_wLg9wuNNjlwdMk9zvMb2pQh224nqGp5vTHUvwft8lo7CWgWKbXcHM1nKwcTL2MDLSp3pp8WypiwgSJeXhuluW1SPhecgajrJ"/>
+</div>
+<div class="col-span-12 md:col-span-6 reveal-up">
+<img class="w-full h-64 object-cover rounded-lg" data-alt="A panoramic wide shot of Lake Como at sunset with a classic Italian speedboat crossing the water. The mood is opulent and serene. Cinematic wedding destination photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB06BBATw8l7bRNxwS961Zs3I99oEa7OFs5OIsUl-Vp_FD0eqHOduAKA-Ckh7wLY7laPVq7mBi2P15KIAWk5TonbyEXMsl1ZrieWbjaD_cJOIValTjGvodLG1MQ2JihwGOM7StJ7FOavNGOlM0o5-E0R4r0eqt3FmrjMpsGJWDIGvc2AruTyhhjjEVgDWuQaQ2NvSCE_CYvgt8Zcyke4i6ENPbxoqvTn38fNVYa9op_0wZcadKhaTKV"/>
+</div>
+</div>
+</section>
+<!-- Event Details -->
+<section class="py-24 bg-surface-container-high/30" id="events">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-lg text-center mb-16 reveal-up">The Celebration</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Ceremony -->
+<div class="glass-panel p-10 rounded-3xl text-center reveal-up hover:-translate-y-2 transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="church">church</span>
+<h3 class="font-headline-md text-headline-md mb-4">Ceremony</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">4:30 PM<br/>Villa del Balbianello<br/>Lenno, Italy</p>
+<div class="h-[1px] w-12 bg-primary/20 mx-auto mb-6"></div>
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Formal Attire</p>
+</div>
+<!-- Reception -->
+<div class="glass-panel p-10 rounded-3xl text-center reveal-up delay-100 hover:-translate-y-2 transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="restaurant">restaurant</span>
+<h3 class="font-headline-md text-headline-md mb-4">Dinner</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">7:00 PM<br/>Grand Hotel Tremezzo<br/>Lake Side Pavilion</p>
+<div class="h-[1px] w-12 bg-primary/20 mx-auto mb-6"></div>
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Black Tie Optional</p>
+</div>
+<!-- Afterparty -->
+<div class="glass-panel p-10 rounded-3xl text-center reveal-up delay-200 hover:-translate-y-2 transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="celebration">celebration</span>
+<h3 class="font-headline-md text-headline-md mb-4">Party</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">10:00 PM<br/>Moonlight Lounge<br/>Dancing under the stars</p>
+<div class="h-[1px] w-12 bg-primary/20 mx-auto mb-6"></div>
+<p class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Bring your dance shoes</p>
+</div>
+</div>
+</div>
+</section>
+<!-- RSVP Section -->
+<section class="py-32 px-margin-mobile relative" id="rsvp">
+<div class="max-w-2xl mx-auto glass-panel p-8 md:p-16 rounded-[40px] reveal-up relative overflow-hidden">
+<!-- Sparkle overlay for success -->
+<div class="absolute inset-0 bg-surface/95 z-20 flex flex-col items-center justify-center text-center opacity-0 pointer-events-none transition-opacity duration-700" id="rsvp-success">
+<span class="material-symbols-outlined text-primary text-6xl mb-6" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Thank You!</h3>
+<p class="font-body-lg text-body-lg text-secondary mt-4">We cannot wait to celebrate our special day with you.</p>
+<div class="absolute inset-0 pointer-events-none" id="heart-container"></div>
+</div>
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg mb-2">Kindly Respond</h2>
+<p class="font-body-md text-body-md text-secondary">Please RSVP by September 1st, 2024</p>
+</div>
+<form class="space-y-8" id="rsvp-form" onsubmit="handleRSVP(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase tracking-widest text-primary ml-1">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-body-lg" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps uppercase tracking-widest text-primary ml-1">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-body-lg" placeholder="email@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-4 pt-4">
+<label class="font-label-caps text-label-caps uppercase tracking-widest text-primary text-center block">Will you attend?</label>
+<div class="flex justify-center gap-6">
+<label class="group cursor-pointer">
+<input checked="" class="hidden peer" name="attendance" type="radio" value="yes"/>
+<div class="px-8 py-3 rounded-full border border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/20 text-secondary peer-checked:text-primary transition-all font-label-caps text-label-caps uppercase tracking-widest">
+                                Joyfully Attend
+                            </div>
+</label>
+<label class="group cursor-pointer">
+<input class="hidden peer" name="attendance" type="radio" value="no"/>
+<div class="px-8 py-3 rounded-full border border-outline-variant peer-checked:border-primary peer-checked:bg-primary-container/20 text-secondary peer-checked:text-primary transition-all font-label-caps text-label-caps uppercase tracking-widest">
+                                Regretfully Decline
+                            </div>
+</label>
+</div>
+</div>
+<div class="space-y-2 pt-4">
+<label class="font-label-caps text-label-caps uppercase tracking-widest text-primary ml-1">Dietary Requirements</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-body-lg resize-none" placeholder="Allergies or special requests..." rows="2"></textarea>
+</div>
+<div class="pt-8 text-center">
+<button class="shimmer-btn bg-inverse-surface text-surface px-12 py-4 rounded-full font-label-caps text-label-caps uppercase tracking-[0.2em] transition-all hover:scale-105 active:scale-95 shadow-xl" type="submit">
+                        Send Response
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Shared Footer -->
+<footer class="w-full py-16 bg-surface-container-lowest dark:bg-surface-dim flex flex-col items-center space-y-8 px-margin-mobile">
+<div class="font-accent-calligraphy text-headline-md text-primary dark:text-primary-fixed">Elena &amp; Julian</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md italic text-secondary hover:text-primary transition-colors" href="#">Guest Info</a>
+<a class="font-body-md text-body-md italic text-secondary hover:text-primary transition-colors" href="#">Travel Tips</a>
+<a class="font-body-md text-body-md italic text-secondary hover:text-primary transition-colors" href="#">Privacy</a>
+</div>
+<p class="font-body-md text-body-md italic text-secondary dark:text-secondary-fixed-dim">© 2024 Crafted with Love • Eternal Romance</p>
+</footer>
+<!-- Shared BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-full bg-surface/40 backdrop-blur-2xl border border-outline-variant/20 shadow-2xl md:hidden z-50 flex justify-around items-center py-2 px-6">
+<a class="flex flex-col items-center justify-center text-secondary p-3 hover:scale-110 transition-transform" href="#story">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Story</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-3 hover:scale-110 transition-transform" href="#gallery">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-3 hover:scale-110 transition-transform" href="#events">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold bg-primary-container/20 rounded-full p-3 scale-110" href="#rsvp">
+<span class="material-symbols-outlined" data-icon="edit_calendar" style="font-variation-settings: 'FILL' 1;">edit_calendar</span>
+<span class="font-label-caps text-[10px] uppercase mt-1">RSVP</span>
+</a>
+</nav>
+<script>
+        // Intro Animation
+        const introText = "Every Love Story is Beautiful... |...but ours is our favorite.";
+        const typewriterElement = document.getElementById('typewriter');
+        let i = 0;
+
+        function typeWriter() {
+            if (i < introText.length) {
+                if (introText.charAt(i) === '|') {
+                    typewriterElement.innerHTML += '<br>';
+                    setTimeout(typeWriter, 1000);
+                } else {
+                    typewriterElement.innerHTML += introText.charAt(i);
+                    setTimeout(typeWriter, 70);
+                }
+                i++;
+            } else {
+                setTimeout(() => {
+                    document.getElementById('intro').style.opacity = '0';
+                    setTimeout(() => {
+                        document.getElementById('intro').classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }, 1000);
+                }, 1500);
+            }
+        }
+
+        window.addEventListener('load', () => {
+            document.body.style.overflow = 'hidden';
+            setTimeout(typeWriter, 500);
+        });
+
+        // Mouse Follower
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Scroll Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Countdown Timer
+        const weddingDate = new Date("Oct 24, 2024 16:30:00").getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+
+        // RSVP Handler
+        function handleRSVP(e) {
+            e.preventDefault();
+            const successDiv = document.getElementById('rsvp-success');
+            const heartContainer = document.getElementById('heart-container');
+            
+            successDiv.classList.remove('pointer-events-none');
+            successDiv.style.opacity = '1';
+
+            // Floating hearts animation
+            for(let i=0; i<15; i++) {
+                const heart = document.createElement('span');
+                heart.className = 'material-symbols-outlined absolute text-primary opacity-0 text-xl';
+                heart.innerText = 'favorite';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.top = '100%';
+                heart.style.fontVariationSettings = "'FILL' 1";
+                heartContainer.appendChild(heart);
+
+                heart.animate([
+                    { transform: 'translateY(0) scale(0)', opacity: 0 },
+                    { transform: `translateY(-${300 + Math.random() * 200}px) translateX(${(Math.random() - 0.5) * 100}px) scale(1)`, opacity: 0.8 },
+                    { transform: `translateY(-600px) translateX(${(Math.random() - 0.5) * 200}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 2000 + Math.random() * 2000,
+                    easing: 'ease-out'
+                });
+            }
+        }
+    </script>
+</body></html>
